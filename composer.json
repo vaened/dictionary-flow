@@ -1,0 +1,18 @@
+{
+    "name": "vaened/value-dicider",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vaened\\CollectionEvaluator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enea Dhack",
+            "email": "enea.so@live.com"
+        }
+    ],
+    "require": {
+        "vaened/support": "^0.1.0"
+    }
+}

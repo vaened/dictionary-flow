@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Vaened\CollectionEvaluator;
 
+use Vaened\CollectionEvaluator\Specifications\Datify;
 use Vaened\CollectionEvaluator\Specifications\Integrify;
 use Vaened\CollectionEvaluator\Specifications\Jsonify;
 use Vaened\CollectionEvaluator\Specifications\Listify;
@@ -20,8 +21,7 @@ final class Input implements Argument
         private readonly string        $name,
         private readonly Specification $specification,
         private readonly bool          $optional,
-    )
-    {
+    ) {
     }
 
     public static function optional(string $name, Specification $specification): self
@@ -57,6 +57,11 @@ final class Input implements Argument
     public static function text(string $name, bool $optional = false): self
     {
         return new self($name, new Stringify(), $optional);
+    }
+
+    public static function date(string $name, string $dateFormat = null, bool $optional = false): self
+    {
+        return new self($name, new Datify($dateFormat), $optional);
     }
 
     public function withDefault(mixed $value): self

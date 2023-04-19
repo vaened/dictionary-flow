@@ -30,7 +30,10 @@ if (isset($attributes['name'])){
 ```php
 // with mediator
 $mediator->when(
-    new Dater('birthdate', fn(DateTimeInterface $birthdate) => var_dump($birthdate))
+    Has::value(
+        Input::date('birthdate'),
+        fn(DateTimeInterface $birthdate) => var_dump($birthdate) 
+    )
 );
 
 // without mediator

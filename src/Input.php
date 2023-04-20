@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Vaened\CollectionEvaluator;
 
 use Vaened\CollectionEvaluator\Specifications\Datify;
+use Vaened\CollectionEvaluator\Specifications\Enumerator;
 use Vaened\CollectionEvaluator\Specifications\Integrify;
 use Vaened\CollectionEvaluator\Specifications\Jsonify;
 use Vaened\CollectionEvaluator\Specifications\Listify;
@@ -62,6 +63,11 @@ final class Input implements Argument
     public static function date(string $name, string $dateFormat = null, bool $optional = false): self
     {
         return new self($name, new Datify($dateFormat), $optional);
+    }
+
+    public static function enum(string $name, string $enumClassName, bool $optional = false)
+    {
+        return new self($name, new Enumerator($enumClassName), $optional);
     }
 
     public function withDefault(mixed $value): self

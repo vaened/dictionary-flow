@@ -24,7 +24,7 @@ $mediator->when(new Matcher(fn(string $name) => var_dump($name)));
 
 // without mediator
 if (isset($attributes['name'])){
-    var_dump($name)
+    var_dump($attributes['name'])
 }
 ```
 ```php
@@ -60,6 +60,6 @@ $mediator->when(
 
 // without mediator
 if (isset($attributes['skills']) && is_array($attributes['skills'])){
-    var_dump(new DateTime($attributes['skills']));
+    var_dump($attributes['skills']);
 }
 ```

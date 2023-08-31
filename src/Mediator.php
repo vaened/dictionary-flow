@@ -7,6 +7,8 @@ declare(strict_types=1);
 
 namespace Vaened\CollectionEvaluator;
 
+use Countable;
+
 use function count;
 use function Lambdish\Phunctional\apply;
 
@@ -46,7 +48,7 @@ final class Mediator
         };
     }
 
-    private function isSatisfied(ArgumentBag $requiredArguments, array $satisfiedValues): bool
+    private function isSatisfied(ArgumentBag $requiredArguments, Countable $satisfiedValues): bool
     {
         return $requiredArguments->count() === count($satisfiedValues);
     }

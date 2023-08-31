@@ -7,11 +7,16 @@ declare(strict_types=1);
 
 namespace Vaened\CollectionEvaluator;
 
-use Vaened\Support\Types\ArrayObject;
+use Vaened\Support\Types\SecureList;
 
-final class ArgumentBag extends ArrayObject
+final class ArgumentBag extends SecureList
 {
-    protected function type(): string
+    public static function from(iterable $arguments): self
+    {
+        return new self($arguments);
+    }
+
+    protected static function type(): string
     {
         return Argument::class;
     }

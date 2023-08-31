@@ -13,6 +13,6 @@
         }
     ],
     "require": {
-        "vaened/support": "^0.1.0"
+        "vaened/support": "^3.2.0"
     }
 }

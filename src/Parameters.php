@@ -59,6 +59,6 @@ final class Parameters implements Countable, IteratorAggregate
 
     private static function registerIn(self $parameters): callable
     {
-        return static fn(string $name, string $value) => $parameters->register($name, new Value($value));
+        return static fn(string $value, string $name) => $parameters->register($name, new Value($value));
     }
 }

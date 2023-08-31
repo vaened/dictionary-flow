@@ -5,11 +5,11 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\By;
+namespace Vaened\DictionaryParser\By;
 
-use Vaened\CollectionEvaluator\Argument;
-use Vaened\CollectionEvaluator\ArgumentBag;
-use Vaened\CollectionEvaluator\Decision;
+use Vaened\DictionaryParser\Argument;
+use Vaened\DictionaryParser\ArgumentBag;
+use Vaened\DictionaryParser\Decision;
 
 final class Has implements Decision
 {

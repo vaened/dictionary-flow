@@ -1,9 +1,9 @@
 {
-    "name": "vaened/value-dicider",
+    "name": "vaened/dictionary-parser",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Vaened\\CollectionEvaluator\\": "src/"
+            "Vaened\\DictionaryParser\\": "src/"
         }
     },
     "authors": [

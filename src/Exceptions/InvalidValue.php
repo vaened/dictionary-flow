@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\Exceptions;
+namespace Vaened\DictionaryParser\Exceptions;
 
 use InvalidArgumentException;
 

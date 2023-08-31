@@ -5,26 +5,20 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\By;
+namespace Vaened\DictionaryParser\By;
 
 use ReflectionFunction;
 use ReflectionNamedType;
 use ReflectionParameter;
 use ReflectionType;
-use Vaened\CollectionEvaluator\Argument;
-use Vaened\CollectionEvaluator\ArgumentBag;
-use Vaened\CollectionEvaluator\Decision;
-use Vaened\CollectionEvaluator\Exceptions\InvalidType;
-use Vaened\CollectionEvaluator\Exceptions\UnsupportedMultiTyped;
-use Vaened\CollectionEvaluator\Input;
-use Vaened\CollectionEvaluator\NameNormalizers\InputNameNormalizer;
-use Vaened\CollectionEvaluator\NameNormalizers\SnakeCase;
-use Vaened\CollectionEvaluator\Specification;
-use Vaened\CollectionEvaluator\Specifications\Decimalizer;
-use Vaened\CollectionEvaluator\Specifications\Integrify;
-use Vaened\CollectionEvaluator\Specifications\Listify;
-use Vaened\CollectionEvaluator\Specifications\Logical;
-use Vaened\CollectionEvaluator\Specifications\Stringify;
+use Vaened\DictionaryParser\Argument;
+use Vaened\DictionaryParser\ArgumentBag;
+use Vaened\DictionaryParser\Decision;
+use Vaened\DictionaryParser\Exceptions\{InvalidType, UnsupportedMultiTyped};
+use Vaened\DictionaryParser\Input;
+use Vaened\DictionaryParser\NameNormalizers\{InputNameNormalizer, SnakeCase};
+use Vaened\DictionaryParser\Specification;
+use Vaened\DictionaryParser\Specifications\{Decimalizer, Integrify, Listify, Logical, Stringify};
 
 use function Lambdish\Phunctional\map;
 use function sprintf;
@@ -88,7 +82,7 @@ final class Matcher implements Decision
             'bool'   => new Logical(),
             'float'  => new Decimalizer(),
             'array'  => new Listify(),
-            default  => throw new InvalidType(
+            default => throw new InvalidType(
                 sprintf(
                     'Supported arguments are string|int|bool|float|array, %s given for <%s>',
                     $type?->getName() ?? 'Unknown',

@@ -5,15 +5,12 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\Specifications;
-
+namespace Vaened\DictionaryParser\Specifications;
 
 use BackedEnum;
-use Vaened\CollectionEvaluator\Exceptions\InvalidValue;
-use Vaened\CollectionEvaluator\Specification;
-
-use Vaened\CollectionEvaluator\Value;
-
+use Vaened\DictionaryParser\Exceptions\InvalidValue;
+use Vaened\DictionaryParser\Specification;
+use Vaened\DictionaryParser\Value;
 use ValueError;
 
 use function call_user_func;

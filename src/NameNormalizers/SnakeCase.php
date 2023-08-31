@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\NameNormalizers;
+namespace Vaened\DictionaryParser\NameNormalizers;
 
 final class SnakeCase implements InputNameNormalizer
 {

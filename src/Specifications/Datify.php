@@ -5,12 +5,12 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator\Specifications;
+namespace Vaened\DictionaryParser\Specifications;
 
 use DateTime;
 use DateTimeInterface;
-use Vaened\CollectionEvaluator\Specification;
-use Vaened\CollectionEvaluator\Value;
+use Vaened\DictionaryParser\Specification;
+use Vaened\DictionaryParser\Value;
 
 final class Datify implements Specification
 {

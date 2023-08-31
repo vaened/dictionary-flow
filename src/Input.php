@@ -5,14 +5,14 @@
 
 declare(strict_types=1);
 
-namespace Vaened\CollectionEvaluator;
+namespace Vaened\DictionaryParser;
 
-use Vaened\CollectionEvaluator\Specifications\Datify;
-use Vaened\CollectionEvaluator\Specifications\Enumerator;
-use Vaened\CollectionEvaluator\Specifications\Integrify;
-use Vaened\CollectionEvaluator\Specifications\Jsonify;
-use Vaened\CollectionEvaluator\Specifications\Listify;
-use Vaened\CollectionEvaluator\Specifications\Stringify;
+use Vaened\DictionaryParser\Specifications\Datify;
+use Vaened\DictionaryParser\Specifications\Enumerator;
+use Vaened\DictionaryParser\Specifications\Integrify;
+use Vaened\DictionaryParser\Specifications\Jsonify;
+use Vaened\DictionaryParser\Specifications\Listify;
+use Vaened\DictionaryParser\Specifications\Stringify;
 
 final class Input implements Argument
 {

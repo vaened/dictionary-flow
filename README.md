@@ -1,15 +1,13 @@
 # Dictionary Parser
-
-The DataEvaluator library empowers developers to conduct comprehensive evaluations within a data dictionary structure comprising
+The Dictionary Parser library empowers developers to conduct comprehensive evaluations within a data dictionary structure comprising
 key-value pairs. This versatile tool streamlines the process of interpreting andanalyzing values within the collection. By enabling users
 to define precise evaluation conditions and corresponding actions, it facilitates data-driven decision-making.
 
 ## Installation
-
 You can install the library using composer.
 
 ```shell
-composer require vaened/dictionary-parse
+composer require vaened/dictionary-parser
 ```
 
 ## Usage

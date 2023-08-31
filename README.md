@@ -1,65 +1,56 @@
-# Collection Evaluator
-Functionality to evaluate a collection of data and decide on its values.
+# Dictionary Parser
+
+The DataEvaluator library empowers developers to conduct comprehensive evaluations within a data dictionary structure comprising
+key-value pairs. This versatile tool streamlines the process of interpreting andanalyzing values within the collection. By enabling users
+to define precise evaluation conditions and corresponding actions, it facilitates data-driven decision-making.
+
+## Installation
+
+You can install the library using composer.
+
+```shell
+composer require vaened/dictionary-parse
+```
+
+## Usage
 
 ```php
-$parameters = new Parameters();
-$attributes     = [
-    'name'      => 'You',
-    'birthdate' => '1996-01-01',
-    'married'   => false,
-    'skills'    => ['PHP', 'Js', 'Python'] 
-];
-
-each(
-    fn(string $name) => $parameters->register($name, new Value($this->input($name))), 
-    $attributes
-);
-
 $mediator = new Mediator($parameters);
-```
 
-```php
-// with mediator
-$mediator->when(new Matcher(fn(string $name) => var_dump($name)));
-
-// without mediator
-if (isset($attributes['name'])){
-    var_dump($attributes['name'])
-}
-```
-```php
-// with mediator
+// Utilize reflection to dynamically evaluate the data dictionary
+// based on the specified function signature.
 $mediator->when(
-    Has::value(
-        Input::date('birthdate'),
-        fn(DateTimeInterface $birthdate) => var_dump($birthdate) 
+    new Matcher(
+        fn(array $skills) => /* Perform appropriate action for skills */
     )
 );
 
-// without mediator
-if (isset($attributes['birthdate'])){
-    var_dump(new DateTime($attributes['birthdate']));
-}
-```
-```php
-// with mediator
+// Manually check if the 'birthdate' key has a value and process
+// it accordingly.
 $mediator->when(
-    new Matcher(fn(bool $married) => var_dump($married))
+    Has::value(
+        Input::date('birthdate'),
+        fn(DateTimeInterface $birthdate) => /* Perform relevant action based on birthdate */
+    )
 );
-
-// without mediator
-if (isset($attributes['married']) && is_bool($attributes['married'])){
-    var_dump($attributes['married']);
-}
 ```
-```php
-// with mediator
-$mediator->when(
-    new Matcher(fn(array $skills) => var_dump($skills))
-);
 
-// without mediator
-if (isset($attributes['skills']) && is_array($attributes['skills'])){
-    var_dump($attributes['skills']);
-}
+### Initialize
+
+To start utilizing the library, follow these steps to set up the essential components:
+
+```php
+// Define your input data as an associative array.
+$dictionary = [
+    'name' => 'You',
+    'birthdate' => '1996-01-01',
+    'married' => false,
+    'skills' => ['PHP', 'Js', 'Python']
+];
+
+// Create a Parameters instance from the defined dictionary.
+$parameters = Parameters::from($dictionary);
+
+// Initialize the Mediator using the prepared Parameters instance.
+$mediator = new Mediator($parameters);
 ```

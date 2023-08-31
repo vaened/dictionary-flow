@@ -13,10 +13,19 @@ use IteratorAggregate;
 use Traversable;
 
 use function count;
+use function Lambdish\Phunctional\each;
 
 final class Parameters implements Countable, IteratorAggregate
 {
     private array $values = [];
+
+    public static function from(array $dictionary): self
+    {
+        $parameters = new self();
+        each(self::registerIn($parameters), $dictionary);
+
+        return $parameters;
+    }
 
     public function register(string $name, ?Value $value): void
     {
@@ -46,5 +55,10 @@ final class Parameters implements Countable, IteratorAggregate
     public function count(): int
     {
         return count($this->all());
+    }
+
+    private static function registerIn(self $parameters): callable
+    {
+        return static fn(string $name, string $value) => $parameters->register($name, new Value($value));
     }
 }

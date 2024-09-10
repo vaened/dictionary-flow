@@ -1,18 +1,29 @@
 {
-    "name": "vaened/dictionary-parser",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Vaened\\DictionaryParser\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Enea Dhack",
-            "email": "enea.so@live.com"
-        }
-    ],
-    "require": {
-        "vaened/support": "^3.2.0"
+  "name": "vaened/dictionary-parser",
+  "description": "A library for comprehensive evaluations within a key-value data dictionary, enabling precise condition definitions and data-driven decision-making.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "data-dictionary",
+    "evaluation",
+    "key-value",
+    "data-analysis",
+    "decision-making",
+    "parser"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Vaened\\DictionaryParser\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Enea Dhack",
+      "email": "enea.so@live.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "vaened/support": "^3.2.0"
+  }
 }

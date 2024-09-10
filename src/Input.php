@@ -12,6 +12,7 @@ use Vaened\DictionaryParser\Specifications\Enumerator;
 use Vaened\DictionaryParser\Specifications\Integrify;
 use Vaened\DictionaryParser\Specifications\Jsonify;
 use Vaened\DictionaryParser\Specifications\Listify;
+use Vaened\DictionaryParser\Specifications\Logical;
 use Vaened\DictionaryParser\Specifications\Stringify;
 
 final class Input implements Argument
@@ -22,7 +23,8 @@ final class Input implements Argument
         private readonly string        $name,
         private readonly Specification $specification,
         private readonly bool          $optional,
-    ) {
+    )
+    {
     }
 
     public static function optional(string $name, Specification $specification): self
@@ -68,6 +70,11 @@ final class Input implements Argument
     public static function enum(string $name, string $enumClassName, bool $optional = false)
     {
         return new self($name, new Enumerator($enumClassName), $optional);
+    }
+
+    public static function boolean(string $name, bool $optional = false): self
+    {
+        return new self($name, new Logical(), $optional);
     }
 
     public function withDefault(mixed $value): self

@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 namespace Vaened\DictionaryParser\Tests\Decision;
 
-use DateTime;
+use DateTimeImmutable;
 use PHPUnit\Framework\Attributes\Test;
 use Vaened\DictionaryParser\By\Has;
 use Vaened\DictionaryParser\Input;
@@ -22,8 +22,8 @@ final class HasTest extends TestCase
         $birthdate = Has::value(
             Input::date('birthdate'),
             function ($value) {
-                $this->assertInstanceOf(DateTime::class, $value);
-                $this->assertEquals(new DateTime('1996-01-01'), $value);
+                $this->assertInstanceOf(DateTimeImmutable::class, $value);
+                $this->assertEquals(new DateTimeImmutable('1996-01-01'), $value);
             }
         );
 

@@ -18,7 +18,7 @@ final class Mediator
     {
     }
 
-    public function when(Decision $decision): self
+    public function on(Decision $decision): self
     {
         $values = $decision->argumentBag()
                            ->filter($this->satisfiedOrOptionalValues())

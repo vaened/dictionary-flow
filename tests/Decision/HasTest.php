@@ -27,7 +27,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($birthdate);
+        $this->mediator()->on($birthdate);
     }
 
     #[Test]
@@ -41,7 +41,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($name);
+        $this->mediator()->on($name);
     }
 
     #[Test]
@@ -55,7 +55,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($weight);
+        $this->mediator()->on($weight);
     }
 
     #[Test]
@@ -69,7 +69,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($age);
+        $this->mediator()->on($age);
     }
 
     #[Test]
@@ -83,7 +83,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($married);
+        $this->mediator()->on($married);
     }
 
     #[Test]
@@ -97,7 +97,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($skills);
+        $this->mediator()->on($skills);
     }
 
     #[Test]
@@ -111,7 +111,7 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($gender);
+        $this->mediator()->on($gender);
     }
 
     #[Test]
@@ -128,6 +128,6 @@ final class HasTest extends TestCase
             }
         );
 
-        $this->mediator()->when($contact);
+        $this->mediator()->on($contact);
     }
 }

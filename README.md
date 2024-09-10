@@ -21,7 +21,7 @@ $mediator = new Mediator($parameters);
 
 // Utilize reflection to dynamically evaluate the data dictionary
 // based on the specified function signature.
-$mediator->when(
+$mediator->on(
     new Matches(
         fn(array $skills) => /* Perform appropriate action for skills */
     )
@@ -29,7 +29,7 @@ $mediator->when(
 
 // Manually check if the 'birthdate' key has a value and process
 // it accordingly.
-$mediator->when(
+$mediator->on(
     Has::value(
         Input::date('birthdate'),
         fn(DateTimeInterface $birthdate) => /* Perform relevant action based on birthdate */

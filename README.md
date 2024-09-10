@@ -12,7 +12,7 @@ By using this tool, you can easily define rules to process data and perform corr
 You can install the library using composer.
 
 ```shell
-composer require vaened/dictionary-parser
+composer require vaened/dictionary-flow
 ```
 
 ## Usage

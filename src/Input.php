@@ -53,9 +53,9 @@ final class Input implements Argument
         return new self($name, new Listify(), $optional);
     }
 
-    public static function json(string $name, bool $optional = false): self
+    public static function json(string $name, bool $associative = true, bool $optional = false): self
     {
-        return new self($name, new Jsonify(), $optional);
+        return new self($name, new Jsonify($associative), $optional);
     }
 
     public static function text(string $name, bool $optional = false): self

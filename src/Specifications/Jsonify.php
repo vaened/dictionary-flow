@@ -14,6 +14,10 @@ use function json_decode;
 
 final class Jsonify implements Specification
 {
+    public function __construct(private readonly bool $associative = true)
+    {
+    }
+
     public function isSatisfiedBy(Value $value): bool
     {
         return (!$value->isEmpty() && $value->isString()) || $value->isArray();
@@ -25,6 +29,6 @@ final class Jsonify implements Specification
             return $value->primitive();
         }
 
-        return json_decode((string)$value->primitive());
+        return json_decode((string)$value->primitive(), $this->associative);
     }
 }

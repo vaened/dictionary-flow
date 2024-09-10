@@ -1,6 +1,6 @@
 # Dictionary Parser
 
-[![Tests](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml/badge.svg)](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml)[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](license)
+[![Tests](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml/badge.svg)](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](license)
 
 The Dictionary Parser library empowers developers to conduct comprehensive evaluations within a data dictionary structure comprising
 key-value pairs. This versatile tool streamlines the process of interpreting andanalyzing values within the collection. By enabling users

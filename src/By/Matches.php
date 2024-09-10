@@ -23,16 +23,17 @@ use Vaened\DictionaryParser\Specifications\{Decimalizer, Integrify, Listify, Log
 use function Lambdish\Phunctional\map;
 use function sprintf;
 
-final class Matcher implements Decision
+final class Matches implements Decision
 {
-    private readonly mixed $action;
+    private readonly mixed       $action;
 
     private readonly ArgumentBag $arguments;
 
     public function __construct(
         callable                             $action,
         private readonly InputNameNormalizer $nameNormalizer = new SnakeCase()
-    ) {
+    )
+    {
         $this->action = $action;
         $this->fillInputBag((new ReflectionFunction($action))->getParameters());
     }
@@ -78,10 +79,10 @@ final class Matcher implements Decision
 
         return match ($type?->getName()) {
             'string' => new Stringify(),
-            'int'    => new Integrify(),
-            'bool'   => new Logical(),
-            'float'  => new Decimalizer(),
-            'array'  => new Listify(),
+            'int' => new Integrify(),
+            'bool' => new Logical(),
+            'float' => new Decimalizer(),
+            'array' => new Listify(),
             default => throw new InvalidType(
                 sprintf(
                     'Supported arguments are string|int|bool|float|array, %s given for <%s>',

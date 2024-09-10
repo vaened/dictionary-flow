@@ -22,7 +22,7 @@ $mediator = new Mediator($parameters);
 // Utilize reflection to dynamically evaluate the data dictionary
 // based on the specified function signature.
 $mediator->when(
-    new Matcher(
+    new Matches(
         fn(array $skills) => /* Perform appropriate action for skills */
     )
 );

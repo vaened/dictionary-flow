@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Vaened\DictionaryParser;
 
 use Vaened\DictionaryParser\Specifications\Datify;
+use Vaened\DictionaryParser\Specifications\Decimalizer;
 use Vaened\DictionaryParser\Specifications\Enumerator;
 use Vaened\DictionaryParser\Specifications\Integrify;
 use Vaened\DictionaryParser\Specifications\Jsonify;
@@ -44,7 +45,7 @@ final class Input implements Argument
 
     public static function decimal(string $name, bool $optional = false): self
     {
-        return new self($name, new Integrify(), $optional);
+        return new self($name, new Decimalizer(), $optional);
     }
 
     public static function collection(string $name, bool $optional = false): self

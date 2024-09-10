@@ -21,8 +21,8 @@ final class Mediator
     public function when(Decision $decision): self
     {
         $values = $decision->argumentBag()
-            ->filter($this->satisfiedOrOptionalValues())
-            ->map($this->transformSpecificationValues());
+                           ->filter($this->satisfiedOrOptionalValues())
+                           ->map($this->transformSpecificationValues());
 
         if ($this->isSatisfied($decision->argumentBag(), $values)) {
             apply($decision->action(), $values);

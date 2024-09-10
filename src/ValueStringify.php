@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser;
+namespace Vaened\DictionaryFlow;
 
 use function implode;
 
@@ -16,10 +16,10 @@ final class ValueStringify
         $primitive = $value->primitive();
 
         return match (true) {
-            $value->isNull()    => null,
+            $value->isNull() => null,
             $value->isBoolean() => $primitive ? 'true' : 'false',
-            $value->isArray()   => implode(',', $primitive),
-            default             => (string)$primitive
+            $value->isArray() => implode(',', $primitive),
+            default => (string)$primitive
         };
     }
 }

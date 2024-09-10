@@ -5,11 +5,10 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\Exceptions;
+namespace Vaened\DictionaryFlow\Exceptions;
 
 use InvalidArgumentException;
 
 final class InvalidType extends InvalidArgumentException
 {
-
 }

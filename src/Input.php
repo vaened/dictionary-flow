@@ -5,16 +5,16 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser;
+namespace Vaened\DictionaryFlow;
 
-use Vaened\DictionaryParser\Specifications\Datify;
-use Vaened\DictionaryParser\Specifications\Decimalizer;
-use Vaened\DictionaryParser\Specifications\Enumerator;
-use Vaened\DictionaryParser\Specifications\Integrify;
-use Vaened\DictionaryParser\Specifications\Jsonify;
-use Vaened\DictionaryParser\Specifications\Listify;
-use Vaened\DictionaryParser\Specifications\Logical;
-use Vaened\DictionaryParser\Specifications\Stringify;
+use Vaened\DictionaryFlow\Specifications\Datify;
+use Vaened\DictionaryFlow\Specifications\Decimalizer;
+use Vaened\DictionaryFlow\Specifications\Enumerator;
+use Vaened\DictionaryFlow\Specifications\Integrify;
+use Vaened\DictionaryFlow\Specifications\Jsonify;
+use Vaened\DictionaryFlow\Specifications\Listify;
+use Vaened\DictionaryFlow\Specifications\Logical;
+use Vaened\DictionaryFlow\Specifications\Stringify;
 
 final class Input implements Argument
 {

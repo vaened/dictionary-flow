@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\NameNormalizers;
+namespace Vaened\DictionaryFlow\NameNormalizers;
 
 interface InputNameNormalizer
 {

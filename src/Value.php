@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser;
+namespace Vaened\DictionaryFlow;
 
 use Stringable;
 
@@ -19,7 +19,8 @@ final class Value implements Stringable
 {
     public function __construct(
         private readonly mixed $value,
-    ) {
+    )
+    {
     }
 
     public function isArray(): bool

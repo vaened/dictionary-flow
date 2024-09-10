@@ -5,12 +5,12 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\Tests;
+namespace Vaened\DictionaryFlow\Tests;
 
 use PHPUnit\Framework\TestCase as PhpUnitTestCase;
-use Vaened\DictionaryParser\Mediator;
-use Vaened\DictionaryParser\Parameters;
-use Vaened\DictionaryParser\Tests\Utils\Gender;
+use Vaened\DictionaryFlow\Mediator;
+use Vaened\DictionaryFlow\Parameters;
+use Vaened\DictionaryFlow\Tests\Utils\Gender;
 
 use function json_encode;
 

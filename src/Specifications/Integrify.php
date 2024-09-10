@@ -5,10 +5,10 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\Specifications;
+namespace Vaened\DictionaryFlow\Specifications;
 
-use Vaened\DictionaryParser\Specification;
-use Vaened\DictionaryParser\Value;
+use Vaened\DictionaryFlow\Specification;
+use Vaened\DictionaryFlow\Value;
 
 final class Integrify implements Specification
 {

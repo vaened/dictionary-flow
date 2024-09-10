@@ -5,14 +5,14 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\Tests\Decision;
+namespace Vaened\DictionaryFlow\Tests\Decision;
 
 use DateTimeImmutable;
 use PHPUnit\Framework\Attributes\Test;
-use Vaened\DictionaryParser\By\Has;
-use Vaened\DictionaryParser\Input;
-use Vaened\DictionaryParser\Tests\TestCase;
-use Vaened\DictionaryParser\Tests\Utils\Gender;
+use Vaened\DictionaryFlow\By\Has;
+use Vaened\DictionaryFlow\Input;
+use Vaened\DictionaryFlow\Tests\TestCase;
+use Vaened\DictionaryFlow\Tests\Utils\Gender;
 
 final class HasTest extends TestCase
 {

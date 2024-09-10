@@ -1,5 +1,5 @@
 {
-  "name": "vaened/dictionary-parser",
+  "name": "vaened/dictionary-flow",
   "description": "A library for comprehensive evaluations within a key-value data dictionary, enabling precise condition definitions and data-driven decision-making.",
   "type": "library",
   "license": "MIT",
@@ -13,12 +13,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Vaened\\DictionaryParser\\": "src/"
+      "Vaened\\DictionaryFlow\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Vaened\\DictionaryParser\\Tests\\": "tests/"
+      "Vaened\\DictionaryFlow\\Tests\\": "tests/"
     }
   },
   "authors": [

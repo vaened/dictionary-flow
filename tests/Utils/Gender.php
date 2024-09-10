@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\Tests\Utils;
+namespace Vaened\DictionaryFlow\Tests\Utils;
 
 enum Gender: string
 {

@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser;
+namespace Vaened\DictionaryFlow;
 
 use Vaened\Support\Types\SecureList;
 

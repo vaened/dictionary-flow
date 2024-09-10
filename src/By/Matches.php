@@ -5,20 +5,20 @@
 
 declare(strict_types=1);
 
-namespace Vaened\DictionaryParser\By;
+namespace Vaened\DictionaryFlow\By;
 
 use ReflectionFunction;
 use ReflectionNamedType;
 use ReflectionParameter;
 use ReflectionType;
-use Vaened\DictionaryParser\Argument;
-use Vaened\DictionaryParser\ArgumentBag;
-use Vaened\DictionaryParser\Decision;
-use Vaened\DictionaryParser\Exceptions\{InvalidType, UnsupportedMultiTyped};
-use Vaened\DictionaryParser\Input;
-use Vaened\DictionaryParser\NameNormalizers\{InputNameNormalizer, SnakeCase};
-use Vaened\DictionaryParser\Specification;
-use Vaened\DictionaryParser\Specifications\{Decimalizer, Integrify, Listify, Logical, Stringify};
+use Vaened\DictionaryFlow\Argument;
+use Vaened\DictionaryFlow\ArgumentBag;
+use Vaened\DictionaryFlow\Decision;
+use Vaened\DictionaryFlow\Exceptions\{InvalidType, UnsupportedMultiTyped};
+use Vaened\DictionaryFlow\Input;
+use Vaened\DictionaryFlow\NameNormalizers\{InputNameNormalizer, SnakeCase};
+use Vaened\DictionaryFlow\Specification;
+use Vaened\DictionaryFlow\Specifications\{Decimalizer, Integrify, Listify, Logical, Stringify};
 
 use function Lambdish\Phunctional\map;
 use function sprintf;

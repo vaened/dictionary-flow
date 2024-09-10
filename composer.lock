@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9af9d48a323d9e0bbbf31adec5dbff25",
+    "content-hash": "88cd96ffbfa17ba4baca47260970d463",
     "packages": [
         {
             "name": "lambdish/phunctional",
@@ -64,16 +64,16 @@
         },
         {
             "name": "vaened/support",
-            "version": "v3.2",
+            "version": "v4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vaened/support.git",
-                "reference": "9b6598f106679f579879b31e1d3ef4857feff8b2"
+                "reference": "80255fabe57b7a9f7a561655b845d8fecdda014b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vaened/support/zipball/9b6598f106679f579879b31e1d3ef4857feff8b2",
-                "reference": "9b6598f106679f579879b31e1d3ef4857feff8b2",
+                "url": "https://api.github.com/repos/vaened/support/zipball/80255fabe57b7a9f7a561655b845d8fecdda014b",
+                "reference": "80255fabe57b7a9f7a561655b845d8fecdda014b",
                 "shasum": ""
             },
             "require": {
@@ -103,9 +103,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vaened/support/issues",
-                "source": "https://github.com/vaened/support/tree/v3.2"
+                "source": "https://github.com/vaened/support/tree/v4.0"
             },
-            "time": "2023-08-20T03:33:28+00:00"
+            "time": "2024-07-21T20:36:17+00:00"
         }
     ],
     "packages-dev": [],
@@ -114,7 +114,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^8.0"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

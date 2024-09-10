@@ -16,7 +16,7 @@ final class ArgumentBag extends SecureList
         return new self($arguments);
     }
 
-    protected static function type(): string
+    public static function type(): string
     {
         return Argument::class;
     }

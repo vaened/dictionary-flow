@@ -1,10 +1,11 @@
-# Dictionary Parser
+# Dictionary Flow
 
 [![Tests](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml/badge.svg)](https://github.com/vaened/dictionary-parser/actions/workflows/tests.yml) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](license)
 
-The Dictionary Parser library empowers developers to conduct comprehensive evaluations within a data dictionary structure comprising
-key-value pairs. This versatile tool streamlines the process of interpreting andanalyzing values within the collection. By enabling users
-to define precise evaluation conditions and corresponding actions, it facilitates data-driven decision-making.
+
+The **Dictionary Flow** library is designed to streamline decision-making and action handling based on key-value data dictionaries. It aims to simplify the process by removing the need for repetitive conditions and checks, offering a more structured and flexible approach to managing parameters and executing actions.
+
+By using this tool, you can easily define rules to process data and perform corresponding actions, reducing the reliance on multiple if statements and manual validations. This results in improved code readability and maintainability, making it easier to integrate with systems that handle dynamic data.
 
 ## Installation
 
@@ -56,3 +57,19 @@ $parameters = Parameters::from($dictionary);
 // Initialize the Mediator using the prepared Parameters instance.
 $mediator = new Mediator($parameters);
 ```
+
+Features
+
+• **Code Simplification**: Replaces numerous if checks with a clear, declarative structure for managing conditions and actions.
+
+• **Flexible Evaluation**: Allows for defining rules and actions for various data types and scenarios through a simple and extensible interface.
+
+• **Structured Data Handling**: Facilitates parameter processing based on a key-value dictionary, organizing logic more efficiently.
+
+• **Seamless Integration**: Easily integrates into applications, enabling quick and straightforward configuration.
+
+• **Extensibility**: Allows developers to create their own rule and condition implementations to fit specific needs.
+
+## License
+
+This library is licensed under the MIT License. For more information, please see the [`license`](./license) file.

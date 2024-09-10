@@ -38,7 +38,7 @@ final class Matches implements Decision
         $this->fillInputBag((new ReflectionFunction($action))->getParameters());
     }
 
-    public static function do(callable $action): self
+    public static function signature(callable $action): self
     {
         return new self($action);
     }

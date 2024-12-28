@@ -34,7 +34,7 @@ class Matches implements Decision
 
     public function __construct(
         callable             $action,
-        ?InputNameNormalizer $nameNormalizer
+        ?InputNameNormalizer $nameNormalizer = null
     )
     {
         $this->action         = $action;

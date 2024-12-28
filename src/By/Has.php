@@ -11,7 +11,7 @@ use Vaened\DictionaryFlow\Argument;
 use Vaened\DictionaryFlow\ArgumentBag;
 use Vaened\DictionaryFlow\Decision;
 
-final class Has implements Decision
+class Has implements Decision
 {
     private readonly mixed $action;
 

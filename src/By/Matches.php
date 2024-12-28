@@ -23,7 +23,7 @@ use Vaened\DictionaryFlow\Specifications\{Decimalizer, Integrify, Listify, Logic
 use function Lambdish\Phunctional\map;
 use function sprintf;
 
-final class Matches implements Decision
+class Matches implements Decision
 {
     private readonly mixed       $action;
 

@@ -14,9 +14,10 @@ use ReflectionType;
 use Vaened\DictionaryFlow\Argument;
 use Vaened\DictionaryFlow\ArgumentBag;
 use Vaened\DictionaryFlow\Decision;
+use Vaened\DictionaryFlow\DictionaryFlowConfig;
 use Vaened\DictionaryFlow\Exceptions\{InvalidType, UnsupportedMultiTyped};
 use Vaened\DictionaryFlow\Input;
-use Vaened\DictionaryFlow\NameNormalizers\{InputNameNormalizer, SnakeCaseNameNormalizer};
+use Vaened\DictionaryFlow\NameNormalizers\{InputNameNormalizer};
 use Vaened\DictionaryFlow\Specification;
 use Vaened\DictionaryFlow\Specifications\{Decimalizer, Integrify, Listify, Logical, Stringify};
 
@@ -25,16 +26,19 @@ use function sprintf;
 
 class Matches implements Decision
 {
-    private readonly mixed       $action;
+    private readonly mixed               $action;
 
-    private readonly ArgumentBag $arguments;
+    private readonly ArgumentBag         $arguments;
+
+    private readonly InputNameNormalizer $nameNormalizer;
 
     public function __construct(
-        callable                             $action,
-        private readonly InputNameNormalizer $nameNormalizer = new SnakeCaseNameNormalizer()
+        callable             $action,
+        ?InputNameNormalizer $nameNormalizer
     )
     {
-        $this->action = $action;
+        $this->action         = $action;
+        $this->nameNormalizer = $nameNormalizer ?? DictionaryFlowConfig::defaultInputNameNormalizer();
         $this->fillInputBag((new ReflectionFunction($action))->getParameters());
     }
 

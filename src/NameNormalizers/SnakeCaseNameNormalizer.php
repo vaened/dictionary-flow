@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 namespace Vaened\DictionaryFlow\NameNormalizers;
 
-final class SnakeCase implements InputNameNormalizer
+final class SnakeCaseNameNormalizer implements InputNameNormalizer
 {
     public function normalize(string $name): string
     {

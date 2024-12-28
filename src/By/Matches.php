@@ -16,7 +16,7 @@ use Vaened\DictionaryFlow\ArgumentBag;
 use Vaened\DictionaryFlow\Decision;
 use Vaened\DictionaryFlow\Exceptions\{InvalidType, UnsupportedMultiTyped};
 use Vaened\DictionaryFlow\Input;
-use Vaened\DictionaryFlow\NameNormalizers\{InputNameNormalizer, SnakeCase};
+use Vaened\DictionaryFlow\NameNormalizers\{InputNameNormalizer, SnakeCaseNameNormalizer};
 use Vaened\DictionaryFlow\Specification;
 use Vaened\DictionaryFlow\Specifications\{Decimalizer, Integrify, Listify, Logical, Stringify};
 
@@ -31,7 +31,7 @@ final class Matches implements Decision
 
     public function __construct(
         callable                             $action,
-        private readonly InputNameNormalizer $nameNormalizer = new SnakeCase()
+        private readonly InputNameNormalizer $nameNormalizer = new SnakeCaseNameNormalizer()
     )
     {
         $this->action = $action;
@@ -79,11 +79,11 @@ final class Matches implements Decision
 
         return match ($type?->getName()) {
             'string' => new Stringify(),
-            'int' => new Integrify(),
-            'bool' => new Logical(),
-            'float' => new Decimalizer(),
-            'array' => new Listify(),
-            default => throw new InvalidType(
+            'int'    => new Integrify(),
+            'bool'   => new Logical(),
+            'float'  => new Decimalizer(),
+            'array'  => new Listify(),
+            default  => throw new InvalidType(
                 sprintf(
                     'Supported arguments are string|int|bool|float|array, %s given for <%s>',
                     $type?->getName() ?? 'Unknown',
